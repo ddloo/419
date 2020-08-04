@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: #808080;
+    }
+    .box{
+        position: absolute;
+        height: 150px;
+        width: 500px;
+        background-color: white;
+        left: 50%;
+        top: 50%;
+        transform:translate(-50%,-50%) ;
+        border-color:blueviolet ;
+       
+    }
+    .head{
+        margin: 10px;
+        margin-right: 20px;
+        float: right;
+        display: block;
+    }
+    .content{
+        font-size: 16px;
+        position: absolute;
+        top: 30%;
+        left:10%;
+    }
+    .footer{
+        background-color:rgba(134, 210, 240, 0.8);
+        height: 50px;
+        width: 500px;
+        position: absolute;
+        bottom: 0;
+    }
+    .NO{
+        position: absolute;
+        right: 10px;
+        top:10px;
+        width: 60px;
+        height: 30px;
+        background-color: #999999;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+    }
+    .yes{
+        position: absolute;
+        right: 80px;
+        top:10px;
+        width: 60px;
+        height: 30px;
+        background-color: #447efa;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="head">
+            x
+
+        </div>
+        <div class="content">
+            确定要删除吗
+
+        </div>
+        <div class="footer">
+            <div class="NO">NO</div>
+            <div class="yes">YES</div>
+        </div>
+    </div>
+</body>
+</html>
