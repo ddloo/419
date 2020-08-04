@@ -1,0 +1,80 @@
+ body {
+     background-color: rgba(196, 214, 214, 0.507);
+ }
+ 
+ .myhead {
+     padding: 100px 0 0;
+     height: 100px;
+     text-align: center;
+ }
+ 
+ .par:hover .todo {
+     display: block;
+ }
+ 
+ .par .todo {
+     display: none;
+ }
+ 
+ .submit-box {
+     vertical-align: top;
+     border: 0;
+     border-radius: 5px;
+     width: 500px;
+     height: 35px;
+     z-index: 100;
+     text-align: left;
+     padding-left: 10px;
+     margin: 0 auto;
+ }
+ 
+ .submit-button {
+     border: 0;
+     border-radius: 5px;
+     width: 100px;
+     height: 35px;
+     margin-left: 30px;
+     background-color: #3F5DEA;
+     color: white;
+     cursor: pointer;
+     outline: none;
+     transition: all .1s linear;
+ }
+ 
+ .submit-button:hover {
+     background-color: #3F5DEA80;
+ }
+ 
+ .mycollect {
+     font-weight: bold;
+     font-size: 20px;
+     margin-left: 100px;
+ }
+ 
+ .allbox {
+     padding: 0 100px 0 100px;
+     overflow: hidden;
+ }
+ 
+ .box {
+     height: 30px;
+     width: 270px;
+     margin: 20px 20px 0 0px;
+     padding: 30px 0px 50px 20px;
+     display: inline-block;
+     background-color: white;
+     cursor: pointer;
+ }
+ 
+ img {
+     height: 50px;
+     width: 50px;
+     border-radius: 50%;
+     background-color: blue;
+ }
+ 
+ .mytext {
+     margin-top: 30px;
+     position: absolute;
+     font-weight: 400;
+ }
