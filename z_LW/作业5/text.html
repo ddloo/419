@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        background-color: rgb(231, 156, 102);
+        
+    }
+    .menu{
+        width: 200px;
+        
+        position: relative;
+
+        background-color: cornflowerblue;
+    }
+    .head{
+        width: 100%;
+        height: 70px;
+        background-color: cyan;
+        position: absolute;
+        top: 0;
+    }
+    .goto{
+        height: 50px;
+        width: 50px;
+        position: relative;
+        left: 10px;
+        
+        
+        transform:rotate(180deg);
+        top:20%;
+        cursor:pointer;
+    }
+    .goto::before{
+        content: "";
+        display: block;
+        height: 8px;
+        width: 30px;
+        position: absolute;
+        background-color: white;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        
+        
+    }
+    .goto::after{
+        position: absolute;
+        left: 30px;
+        top:50%;
+        transform: translateY(-50%);
+        content: "";
+        height: 0;
+        width: 0;
+        display: block;
+        border: 10px solid transparent;
+        border-left:10px solid white;
+    }
+    .body{
+        width: 100%;
+        
+        background-color: wheat;
+        position: relative;
+        top:70px;
+    }
+    ul{
+        padding: 0;
+        list-style: none;
+    }
+    ul li{
+        
+       text-align: center;
+        width: 100%;
+        font-size: 18px;
+        margin: 10px 0;
+        cursor: pointer;
+        padding: 10px 0;
+       
+    }
+   ul  li:hover{
+        
+        background-color: rgb(228, 181, 228);
+      
+    }
+    ul  li:hover .icon{
+        transform: rotate(90deg);
+      
+    }
+    .ul{
+        
+        display: none;
+    }
+    .icon{
+        position: relative;
+        display: inline-block;
+        left:50px ;
+        top:3px;
+      
+        height: 20px;
+        width: 20px;
+        
+        
+    }
+    
+  
+    .icon::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top:25%;
+        background-color: white;
+        width: 20px;
+        height: 2px;
+        transform: rotate(30deg);
+       
+
+    }
+    .icon::after{
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 20%;
+        background-color: white;
+        width: 20px;
+        height: 2px;
+        transform: rotate(-30deg);
+       
+    }
+    .li:hover ul{
+        display: block;
+    }
+    .menu2{
+        background-color:wheat;
+        
+    }
+</style>
+<body>
+    <div class="menu">
+        <div class="head">
+            <div class="goto"></div>
+        </div>
+        <div class="body">
+            
+                <ul>
+                    <li class="li">苹果 <div  class="icon"></div>
+                        <div class="menu2">
+                        <ul class="ul">
+                            <li>苹果1</li>
+                            <li>苹果</li>
+                            <li>苹果3</li>
+                            
+                            <li>苹果</li>
+                            <li>苹果</li>
+                            <li>苹果6</li>
+                        </ul>
+                        </div>
+                    </li>
+                    <li>香蕉 <div  class="icon"></div></li>
+                    <li>草莓 <div  class="icon"></div></li>
+                    <li>橘子 <div  class="icon"></div></li>
+                  
+
+            
+        </div>
+    </div>
+</body>
+</html>
