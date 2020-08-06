@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+    }
+    
+    ul {
+        list-style-type: none;
+        padding: 10px;
+        margin: 0;
+    }
+    
+    .nav {
+        width: 150px;
+    }
+    
+    .back-btn {
+        background-color: #2e2e2e;
+    }
+    
+    .icon-back {
+        position: relative;
+        display: inline-block;
+        margin: 15px 0 15px 15px;
+        width: 15px;
+        height: 1.5px;
+        background-color: white;
+        cursor: pointer;
+    }
+    
+    .icon-back::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 8px;
+        height: 1.5px;
+        background-color: white;
+        transform: translateX(-0.5px) rotate(-45deg);
+        top: -3px;
+    }
+    
+    .icon-back::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 8px;
+        height: 1.5px;
+        background-color: white;
+        transform: translateX(-0.5px) rotate(45deg);
+        top: 3px;
+    }
+    
+    .item-1 {
+        background-color: #333;
+        color: #ddd;
+    }
+    
+    li {
+        padding: 10px 0 10px 0;
+    }
+    
+    .btn {
+        position: relative;
+        display: inline-block;
+        background-color: white;
+        cursor: pointer;
+        transform: translateY(-2px) translateX(60px) rotate(45deg);
+    }
+    
+    .btn::before {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 2px;
+        background-color: white;
+        cursor: pointer;
+        transform: translateX(-4px) translateY(-4px) rotate(-90deg);
+        top: -3px;
+    }
+    
+    .btn:hover {
+        transform: translateY(-2px) translateX(60px) rotate(-45deg);
+        transition: 0.5s;
+    }
+    
+    .mycolor {
+        background-color: #000;
+        height: 300px;
+        width: 300px;
+    }
+</style>
+
+<body>
+    <div class="nav">
+        <div class="back-btn">
+            <span class="icon-back"></span>
+        </div>
+        <div>
+            <ul class="item-1">
+                <li>
+                    木叶村
+                    <span class="btn"></span>
+                    <ul class="a">
+                        <li>火影</li>
+                        <li>参谋长</li>
+                    </ul>
+                </li>
+                <li>
+                    雾隐村
+                    <span class="btn"></span>
+                    <ul>
+                        <li>水影</li>
+                        <li>参谋长</li>
+                    </ul>
+                </li>
+                <li>
+                    岩隐村
+                    <span class="btn"></span>
+                    <ul>
+                        <li>土影</li>
+                        <li>参谋长</li>
+                    </ul>
+                </li>
+                <li>
+                    砂隐村
+                    <span class="btn"></span>
+                    <ul>
+                        <li>风影</li>
+                        <li>参谋长</li>
+                    </ul>
+                </li>
+                <li>
+                    云隐村
+                    <span class="btn"></span>
+                    <ul>
+                        <li>雷影</li>
+                        <li>参谋长</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="test">
+        <button class="change1" id="change" onclick="changecolor('yellow')">黄色</button>
+        <button class="change" id="change" onclick="changecolor('red')">红色</button>
+        <div class="mycolor" id="mycolor"></div>
+    </div>
+</body>
+
+<script>
+    function changecolor(color) {
+        document.getElementById("mycolor").style.backgroundColor = color;
+    }
+</script>
+
+</html>
