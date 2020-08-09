@@ -106,6 +106,7 @@
         background-color: rgb(70, 70, 233);
         border-radius: 50%;
         position: relative;
+        cursor: pointer;
     }
     img{
         width: 40px;
@@ -137,6 +138,7 @@
         top: 50%;
         left:50% ;
         transform: translateY(-50%) translateX(-50%);
+        
     }
     .icon::before{
         content: "";
@@ -148,6 +150,45 @@
         position: absolute;
         transform: rotate(90deg);
     }
+    .add{
+       width: 350px;
+       height: 272px;
+       background-color: white;
+       border-radius: 8px;
+       box-shadow: 0 1px 3px 0 ;
+       position: absolute;
+       top:50%;
+       left:50%;
+       transform:  translateX(-50%) translateY(-50%);
+       
+       
+    }
+    .input{
+        width: 300px;
+        height: 34px;
+        border-radius: 8px;
+        border: none;
+        margin-bottom: 15px;
+        background-color: #f1f2f3;
+        outline: none;
+        padding-left: 10px;
+    }
+    .button{
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    .button1{
+        width: 60px;
+        height: 32px;
+       border: 1px solid #f1f2f3;
+        text-align: center;
+        line-height: 32px;
+        border-radius: 5px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
     #icon:hover{
         animation-name: backgroun;
     animation-duration: 1s;
@@ -247,8 +288,58 @@
             <div class="img2" id="icon">
                 <div class="icon"> </div>
             </div>
+         
         </div>
+        <div style="width: 100%;height: 100%; background-color: rgba(0, 0, 0, .5);position:absolute;top:0;display: none;"id="add">
+            <div class="add" >
+                <div style="padding: 15px; margin-left: 5px;">添加快捷方式</div>
+                <div style="padding: 15px; margin-left: 5px;">
+                    <div style="font-size: 15px; color: #808080;">名称</div>
+                    <input type="text" class="input">
+                    <div style="font-size: 15px; color: #808080;">网址</div>
+                    <input type="text" class="input">
+                </div>
+                <div class="button">
+                    <div class="button1" >删除</div>
+                    <div class="button1" style="color:rgb(118, 138, 248) ;" id="cancel">取消</div>
+                    <div class="button1" style="background-color: #f1f2f3;" >完成</div>
+                   
+                   
+                </div>
+            </div>
+            </div>
+
     </div>
+    <script>
+        var a = document.getElementById('icon');
+        var b = document.getElementById('add');
+        var isFade = false;
+        var c= document.getElementById('cancel');
+        a.onclick = function changeFc(){
+          
+            if(isFade == true){
+                b.style.display = "none";
+                isFade = false;
+            }
+            else{
+                b.style.display = "block";
+                isFade = true;
+            }
+        }
+        c.onclick=function change(){
+            if(isFade == true){
+                b.style.display = "none";
+                isFade = false;
+            }
+            else{
+                b.style.display = "block";
+                isFade = true;
+            }
+        }
+        
     
+    </script>
+   
 </body>
+
 </html>
