@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .all {
+        margin: 300px 0 0 600px;
+        position: absolute;
+    }
+    
+    .enemy-blood {
+        background-color: red;
+        width: 300px;
+        height: 30px;
+    }
+    
+    .all-btn {
+        margin-top: 30px;
+    }
+</style>
+
+<body>
+    <div class="all">
+        <div class="enemy-blood" id="enemy-blood"></div>
+        <div>
+            <span>敌人的血量</span>
+        </div>
+        <div class="all-btn">
+            <button id="beat" onclick="one()">拳打</button>
+            <button id="foot" onclick="two()">脚踢</button>
+            <button id="gun" onclick="three()">枪击</button>
+            <button id="reStart" onclick="four()">刷新</button>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    var blood = document.getElementById('enemy-blood');
+    var beat = document.getElementById('beat');
+    var foot = document.getElementById('foot');
+    var gun = document.getElementById('gun');
+
+    function one() {
+        var bloodwidth = blood.offsetWidth;
+        if ((bloodwidth - 30) <= 0) {
+            blood.style.width = 0 + "px";
+        } else {
+            blood.style.width = (bloodwidth - 30) + "px";
+        }
+
+    }
+
+    function two() {
+        var bloodwidth = blood.offsetWidth;
+        if ((bloodwidth - 50) <= 0) {
+            blood.style.width = 0 + "px";
+        } else {
+            blood.style.width = (bloodwidth - 50) + "px";
+        }
+    }
+
+    function three() {
+        var bloodwidth = blood.offsetWidth;
+        if ((bloodwidth - 100) <= 0) {
+            blood.style.width = 0 + "px";
+        } else {
+            blood.style.width = (bloodwidth - 100) + "px";
+        }
+    }
+
+    function four() {
+        location.reload();
+    }
+</script>
+
+</html>
