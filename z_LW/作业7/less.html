@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <script src="./lecss3-12.js"></script>
+    
+</head>
+<body>
+    <div class="body">
+    <div class="test" id="blood"></div>
+    <div><img src="../img/timg.jpg"></div>
+    <ul>
+        <li id="attack1">暗影之拳</li>
+        <li id="attack2">毒龙钻</li>
+        <li id="attack3">双龙出海</li>
+    </ul>
+    </div>
+    <script>
+        var a=document.getElementById('blood');
+        var b=document.getElementById('attack1');
+        var c=document.getElementById('attack2');
+        var d=document.getElementById('attack3');
+        var hurt =0;
+         function att() {
+            var bloodwidth = a.offsetWidth;
+            if ((bloodwidth - hurt) <= 0) {
+            a.style.width = 0 + "px";
+            } else {
+                a.style.width = (bloodwidth - hurt) + "px";
+            }
+        }
+        b.onclick=function att1(){
+            
+            att( hurt =90)
+        }
+        c.onclick=function att1(){
+            
+            att( hurt =60)
+        }
+        d.onclick=function att1(){
+            
+            att( hurt =30)
+        }
+   
+    </script>
+</body>
+</html>
