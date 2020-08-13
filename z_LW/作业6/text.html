@@ -11,9 +11,10 @@
         background-color:rgb(213, 236, 234);
         height: 100%;
         width: 100%;
+        
     }
     .concent{
-        width: 100%;;
+        width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -34,8 +35,7 @@
         border: none;
         outline: none;
         border-radius: 5px;
-        position: relative;
-        right: 60px;
+      
     }
     .btn{
         height: 40px;
@@ -46,8 +46,7 @@
         line-height: 40px;
         color: white;
         border-radius: 5px;
-        position: relative;
-        right: 60px;
+     
     }
     
     .body{
@@ -55,7 +54,9 @@
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        margin-left: 100px;
+        
+        justify-content: center;
+        align-items: center;
         
     }
     .star{
@@ -63,8 +64,8 @@
        
     }
     .link{
-        width: 1320px;
-        margin-left: 100px;
+        
+       width: 1320px;
         flex-grow: 5;
         display: flex;
         flex-wrap: wrap;
@@ -79,7 +80,8 @@
         margin-right: 30px;
         display: flex;
         border-radius: 5px;
-        
+        justify-content: center;
+        align-items: center;
 
     }
     .img{
@@ -118,10 +120,10 @@
         flex-grow: 1;
         display: flex;
         flex-direction: row-reverse;
-        margin-right: 400px;
+        
     }
     h3{
-        margin-bottom: 0;
+        margin: 0;
         font-size: 18px;
         font-weight: 500;
     }
@@ -189,21 +191,7 @@
         cursor: pointer;
     }
 
-    #icon:hover{
-        animation-name: backgroun;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-  }
-  @keyframes backgroun{
-      50%{
-        transform: rotate(180deg);
-        background-color:#f17807;
-      }
-    100%{
-      
-      transform: rotate(0deg);
-    }
-  }
+ 
     
 </style>
 <body>
@@ -214,7 +202,7 @@
         </div>
         <div class="body">
             <div class="star">
-                <div style="position: relative; left:100px;top:50px;font-weight: 600;">我的收藏</div>
+                <div style="position: relative; right:628px; top:50px;font-weight: 600; display: inline-block;">我的收藏</div>
             </div>
             <div class="link">
                
@@ -290,31 +278,36 @@
             </div>
          
         </div>
-        <div style="width: 100%;height: 100%; background-color: rgba(0, 0, 0, .5);position:absolute;top:0;display: none;"id="add">
-            <div class="add" >
-                <div style="padding: 15px; margin-left: 5px;">添加快捷方式</div>
-                <div style="padding: 15px; margin-left: 5px;">
-                    <div style="font-size: 15px; color: #808080;">名称</div>
-                    <input type="text" class="input">
-                    <div style="font-size: 15px; color: #808080;">网址</div>
-                    <input type="text" class="input">
-                </div>
-                <div class="button">
-                    <div class="button1" >删除</div>
-                    <div class="button1" style="color:rgb(118, 138, 248) ;" id="cancel">取消</div>
-                    <div class="button1" style="background-color: #f1f2f3;" >完成</div>
-                   
-                   
-                </div>
-            </div>
-            </div>
+     
 
     </div>
+    <div style="width: 100%;height: 100%; background-color: rgba(0, 0, 0, .5);position:absolute;top:0;display: none;"id="add">
+        <div class="add" >
+            <div style="padding: 15px; margin-left: 5px;">添加快捷方式</div>
+            <div style="padding: 15px; margin-left: 5px;">
+                <div style="font-size: 15px; color: #808080;">名称</div>
+                <input type="text" class="input" id="input1">
+                <div style="font-size: 15px; color: #808080;">网址</div>
+                <input type="text" class="input" id="input2">
+            </div>
+            <div class="button">
+                <div class="button1" id="del" >删除</div>
+                <div class="button1" style="color:rgb(118, 138, 248) ;" id="cancel">取消</div>
+                <div class="button1" style="background-color: #f1f2f3;" >完成</div>
+               
+               
+            </div>
+        </div>
+        </div>
+     </div>
     <script>
         var a = document.getElementById('icon');
         var b = document.getElementById('add');
         var isFade = false;
         var c= document.getElementById('cancel');
+        var d= document.getElementById('del');
+        var e =document.getElementById('input1');
+            var f =document.getElementById('input2');
         a.onclick = function changeFc(){
           
             if(isFade == true){
@@ -330,12 +323,20 @@
             if(isFade == true){
                 b.style.display = "none";
                 isFade = false;
+                e.value = "";
+                f.value = "";
             }
             else{
                 b.style.display = "block";
                 isFade = true;
             }
         }
+        d.onclick=function del(){
+           
+            e.value = "";
+            f.value = "";
+        }
+        
         
     
     </script>
