@@ -1,0 +1,105 @@
+html,body{
+    margin: 0;
+    height: 100%;
+}
+
+.bg{
+    background-image: url(./img/bg.jpg);
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+.head{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    top:70px;
+    left: 80px;
+    width: 90%;
+   img{
+       cursor: pointer;
+       width: 90%;
+       
+   }
+
+}
+.nav{
+    cursor: pointer;
+    ul{
+        
+        list-style-type: none;
+        display: flex;
+        
+        li{
+            color: rgba(255,255,255,0.56);
+          
+            padding:  0 35px;
+            &:hover{
+                color: white;
+            }
+        }
+    }
+        
+}
+.btn{
+    position: absolute;
+    top: 18%;
+    left: 55%;
+    
+    ul{
+        list-style-type: none;
+        display: flex;
+        li{
+            color: white;
+            display: block;
+            .btn-icon{
+                background-image: url(./img/bg-btn-active.png);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                cursor: pointer;
+                height: 180px;
+                width:180px ;
+                img{
+                    position: absolute;
+                    top: 50%;
+                    left:50%;
+                    transform: translateX(-50%) translateY(-50%);
+                }
+                span{
+                    position: absolute;
+                    top: 75%;
+                    left:50%;
+                    transform: translateX(-50%) translateY(-50%);
+                }
+                
+            }
+            .btn-icon2{
+                background-image: url(./img/bg-btn-default.png);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                cursor: pointer;
+                height: 180px;
+                width:180px ;
+                img{
+                    position: absolute;
+                    top: 50%;
+                    left:50%;
+                    transform: translateX(-50%) translateY(-50%);
+                }
+                span{
+                    position: absolute;
+                    top: 75%;
+                    left:50%;
+                    transform: translateX(-50%) translateY(-50%);
+                }
+                
+            }
+        }
+    }
+}
